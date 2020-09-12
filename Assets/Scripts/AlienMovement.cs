@@ -26,6 +26,7 @@ public class AlienMovement : MonoBehaviour
         if(playerDetection)
         {
             float step = speed * Time.deltaTime;
+            transform.rotation = Quaternion.LookRotation(player.transform.position);
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
     }
