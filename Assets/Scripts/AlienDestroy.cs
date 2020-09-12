@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AlienDestroy : MonoBehaviour
 {
+    //public GameObject playerbullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class AlienDestroy : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        //Destroy(other.gameObject);
     }
 }

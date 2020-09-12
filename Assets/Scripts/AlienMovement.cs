@@ -6,12 +6,13 @@ public class AlienMovement : MonoBehaviour
 {
     public float speed=5.0f;
     public float alienAttackRange=20.0f;
-    public GameObject player;
+    public string playername;
+    private GameObject player;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find(playername);
     }
 
     // Update is called once per frame
@@ -25,4 +26,6 @@ public class AlienMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
     }
+
+  
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6351976968217263171}
   - component: {fileID: 1720052146294019998}
   - component: {fileID: 4126170213697426941}
+  - component: {fileID: 6238373598968835725}
   m_Layer: 0
   m_Name: Alien1
   m_TagString: Untagged
@@ -126,4 +127,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   alienAttackRange: 20
+  playername: player
   player: {fileID: 0}
+--- !u!114 &6238373598968835725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8597840429704532853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35aea2f289ba9a43846ad15f6b86d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
