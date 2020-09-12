@@ -128,7 +128,6 @@ MonoBehaviour:
   speed: 10
   alienAttackRange: 20
   playername: player
-  player: {fileID: 0}
 --- !u!114 &6238373598968835725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35aea2f289ba9a43846ad15f6b86d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredDamage: 2
+  selfDestructionSeconds: 10

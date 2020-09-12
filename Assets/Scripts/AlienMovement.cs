@@ -8,6 +8,7 @@ public class AlienMovement : MonoBehaviour
     public float alienAttackRange=20.0f;
     public string playername;
     private GameObject player;
+    bool playerDetection = false;
     
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,12 @@ public class AlienMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) < alienAttackRange)
+        //alien moves when player comes near it
+        if (Vector3.Distance(transform.position, player.transform.position) < alienAttackRange)
+            playerDetection = true;
+        
+        if(playerDetection)
         {
-            //alien moves when player comes near it
-            //Ray ray = new Ray(transform.position, player.transform.position);
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
