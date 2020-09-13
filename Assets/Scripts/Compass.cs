@@ -7,9 +7,8 @@ public class Compass : MonoBehaviour
 {
     public Transform missionCore;
     public RectTransform compassArrow;
-    public Quaternion coreRotation;
+    float angle;
     Vector3 coreDirection;
-    Vector3 compassdirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +19,7 @@ public class Compass : MonoBehaviour
     void Update()
     {
         coreDirection = missionCore.position - transform.position;
-        
-        coreRotation = Quaternion.LookRotation(coreDirection);
-        coreRotation.x = 0;
-        coreRotation.z = -coreRotation.y;
-        coreRotation.y = 0;
-        //coreRotation.x= new Vector3(0,0,missionCore.localEulerAngles.y );
-        compassArrow.localRotation = coreRotation;
+        angle = Vector3.SignedAngle(transform.forward, coreDirection, Vector3.up);
+        compassArrow.localEulerAngles = new Vector3(0,0, -angle);
     }
 }
